@@ -11,16 +11,16 @@ const sendEmail = async (to, subject, text) => {
     });
 
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: `"Password Reset App" <${process.env.EMAIL_USER}>`,
       to,
       subject,
       text,
     });
 
-    console.log("📧 Email sent successfully");
+    console.log(`📧 Email sent to ${to}`);
   } catch (err) {
-    console.error("❌ Email send error:", err.message);
-    throw err;
+    console.error("Email error:", err.message);
+    throw new Error("Email could not be sent");
   }
 };
 

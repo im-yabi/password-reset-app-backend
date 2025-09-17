@@ -3,18 +3,19 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const connectDB = require("./config/db");
 
-dotenv.config(); // ✅ Loads environment variables
-
-connectDB(); // ✅ Connects to MongoDB
+dotenv.config();
+connectDB();
 
 const app = express();
-app.use(cors()); // ✅ Allows cross-origin requests
-app.use(express.json()); // ✅ Parses JSON bodies
 
-// ✅ Authentication routes
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Routes
 app.use("/api/auth", require("./routes/authRoutes"));
 
-// ✅ Root test route
+// Root test route
 app.get("/", (req, res) => {
   res.send("🚀 API is running...");
 });
