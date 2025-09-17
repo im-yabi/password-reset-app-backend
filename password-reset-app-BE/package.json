@@ -2,10 +2,11 @@
   "name": "password-reset-app-be",
   "version": "1.0.0",
   "main": "server.js",
-  "scripts": {
-  "start": "node server.js",
-  "dev": "nodemon server.js"
+"scripts": {
+  "start": "node password-reset-app-BE/server.js",
+  "dev": "nodemon password-reset-app-BE/server.js"
 },
+
  "keywords": [],
   "author": "",
   "license": "ISC",
