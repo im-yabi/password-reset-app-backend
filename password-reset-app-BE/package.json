@@ -1,17 +1,13 @@
 {
-  "name": "password-reset-app-be",
+  "name": "password-reset-app-backend",
   "version": "1.0.0",
-  "main": "server.js",
-"scripts": {
-  "start": "node password-reset-app-BE/server.js",
-  "dev": "nodemon password-reset-app-BE/server.js"
-},
-
- "keywords": [],
+  "description": "Root for Password Reset App Backend",
+  "main": "password-reset-app-BE/server.js",
+  "scripts": {
+    "start": "node password-reset-app-BE/server.js",
+    "dev": "nodemon password-reset-app-BE/server.js"
+  },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "nodemon": "^3.1.10"
-  }
+  "license": "ISC"
 }
